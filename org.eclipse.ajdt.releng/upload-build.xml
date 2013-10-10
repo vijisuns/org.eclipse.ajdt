@@ -8,6 +8,12 @@
 	<property file="${build.dist}/ajdt-zip.properties" />
 	<property environment="env"/>
 	
+	<target name="debug-info" description="Debug some stuff">
+	    <echo message="upload.dir=${upload.dir}"/>
+		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="ls -la"  />
+	</target>
+	
 	<!-- ================================= 
           target: upload-build              
        ================================= -->
