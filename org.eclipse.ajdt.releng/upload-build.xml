@@ -12,6 +12,18 @@
 	    <echo message="upload.dir=${upload.dir}"/>
 		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
 			command="ls -la /home/data/httpd/download.eclipse.org/tools/ajdt/43/dev"  />
+		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="mkdir /home/data/httpd/download.eclipse.org/tools/ajdt/43aj17"  />
+		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="mkdir /home/data/httpd/download.eclipse.org/tools/ajdt/43aj17/dev"  />
+		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="mkdir /home/data/httpd/download.eclipse.org/tools/ajdt/43aj17/dev/update"  />
+		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="ln -s /home/data/httpd/download.eclipse.org/tools/ajdt/43aj17/dev/update 43aj17devupdate"/>
+		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="ls -la /home/data/httpd/download.eclipse.org/tools/ajdt/43aj17/dev"  />
+		
+		
 <!-- 
    43devupdate -> /home/data/httpd/download.eclipse.org//tools/ajdt/43/dev/update/
  -->
