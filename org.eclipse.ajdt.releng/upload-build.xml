@@ -11,7 +11,12 @@
 	<target name="debug-info" description="Debug some stuff">
 	    <echo message="upload.dir=${upload.dir}"/>
 		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
-			command="ls -la"  />
+			command="ls -la /home/data/httpd/download.eclipse.org/tools/ajdt/43/dev"  />
+<!-- 
+   43devupdate -> /home/data/httpd/download.eclipse.org//tools/ajdt/43/dev/update/
+ -->
+<!--		<sshexec host="${upload.host}" username="${env.bamboo_upload_userid}" password="${env.bamboo_upload_password}" failonerror="true" trust="true"
+			command="ls -la"  /> -->
 	</target>
 	
 	<!-- ================================= 
